@@ -18,6 +18,23 @@
 </ul>
 
 
+ <script>
+        function showLogin() {
+            // Nach Benutzername fragen
+            const username = prompt("Bitte gib deinen Benutzernamen ein:");
+
+            // Nach Passwort fragen
+            const password = prompt("Bitte gib dein Passwort ein:");
+
+            // (Optional) Überprüfung – nur Demo
+            if (username === "Spartacus" && password === "1234") {
+                alert("Login erfolgreich! Willkommen, " + username + "!");
+            } else {
+                alert("Login fehlgeschlagen! Bitte versuche es erneut.");
+            }
+        }
+    </script>
+  
   
 </body>
 </html>
