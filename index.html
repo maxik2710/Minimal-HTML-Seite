@@ -5,7 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>maxik.ai</title>
   <link rel="stylesheet" href="style.css" />
+style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
+  
 <body>
   
   <h1>Welcome to maxik.ai 🚀</h1>
@@ -17,27 +63,29 @@
         </li>
 </ul>
 
-
-    <!-- Login-Button -->
-    <button onclick="showLogin()">Login</button>
+  <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Benutzername">
+        <input type="password" id="password" placeholder="Passwort">
+        <button onclick="login()">Login</button>
+    </div>
 
     <script>
-        function showLogin() {
-            // Nach Benutzername fragen
-            const username = prompt("Bitte gib deinen Benutzernamen ein:");
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
-            // Nach Passwort fragen
-            const password = prompt("Bitte gib dein Passwort ein:");
+            // Beispiel-Daten für Demo
+            const validUsername = "Spartacus";
+            const validPassword = "1234";
 
-            // (Optional) Überprüfung – nur Demo
-            if (username === "Spartacus" && password === "1234") {
+            if (username === validUsername && password === validPassword) {
                 alert("Login erfolgreich! Willkommen, " + username + "!");
             } else {
-                alert("Login fehlgeschlagen! Bitte versuche es erneut.");
+                alert("Login fehlgeschlagen! Benutzername oder Passwort falsch.");
             }
         }
     </script>
-  
   
 </body>
 </html>
