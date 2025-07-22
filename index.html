@@ -1,91 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>maxik.ai</title>
-  <link rel="stylesheet" href="style.css" />
-style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .login-container {
-            background-color: #ffffff;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .login-container h2 {
-            margin-bottom: 20px;
-        }
-
-        .login-container input {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .login-container button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Seite</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-  
 <body>
-  
-  <h1>Welcome to maxik.ai 🚀</h1>
-  <p>If you're seeing this, your domain is working 🎉</p>
-
-<ul>
-        <li>
-            <a href="https://example.com" target="_blank"> Mein erster Stichpunkt mit Link</a>
-        </li>
-</ul>
-
-  <div class="login-container">
+    <div class="login-container">
         <h2>Login</h2>
         <input type="text" id="username" placeholder="Benutzername">
         <input type="password" id="password" placeholder="Passwort">
         <button onclick="login()">Login</button>
     </div>
 
-    <script>
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Beispiel-Daten für Demo
-            const validUsername = "Spartacus";
-            const validPassword = "1234";
-
-            if (username === validUsername && password === validPassword) {
-                alert("Login erfolgreich! Willkommen, " + username + "!");
-            } else {
-                alert("Login fehlgeschlagen! Benutzername oder Passwort falsch.");
-            }
-        }
-    </script>
-  
+    <!-- Externes JavaScript einbinden -->
+    <script src="login.js"></script>
 </body>
 </html>
