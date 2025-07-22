@@ -1,16 +1,21 @@
-function login() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+// Get Elements
+const loginBtn = document.getElementById('loginBtn');
+const modal = document.getElementById('loginModal');
+const closeModal = document.getElementById('closeModal');
 
-    // Beispiel-Daten für Demo
-    const validUsername = "Spartacus";
-    const validPassword = "1234";
+// Open Modal on Button Click
+loginBtn.onclick = function() {
+  modal.style.display = "block";
+}
 
-    if (username === validUsername && password === validPassword) {
-        alert("Login erfolgreich! Willkommen, " + username + "!");
-        // Weiterleitung auf eine neue Seite (optional)
-        // window.location.href = "dashboard.html";
-    } else {
-        alert("Login fehlgeschlagen! Benutzername oder Passwort falsch.");
-    }
+// Close Modal on Close Button Click
+closeModal.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Close Modal on Click Outside Modal
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
