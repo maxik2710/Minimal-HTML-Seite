@@ -8,9 +8,12 @@ Sheets = „Blätter“ (Dateien)
 
 
 header {
-  background-color: ##00008B; /* Blaue Hintergrundfarbe (Bootstrap-Blau) */
-  padding: 20px; /* Abstand innerhalb des Headers */
-  color: white; /* Weißer Text im Header */
+  background-color: #00008B;  /* Dunkelblauer Hintergrund */
+  color: white;               /* Weißer Text */
+  display: flex;              /* Aktiviert Flexbox */
+  justify-content: center;    /* Zentriert horizontal */
+  align-items: center;        /* Zentriert vertikal */
+  height: 150px;              /* Höhe für den Header */
 }
 
 body {
