@@ -39,6 +39,52 @@ section {
   margin-bottom: 40px; /* Abstand unter jedem Abschnitt */
 }
 
+/* ===========================
+   Modal Styles
+   =========================== */
+#modal {
+    display: none; /* Modal anfangs unsichtbar */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* halbtransparent schwarzer Hintergrund */
+}
+
+#modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #aaa;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 form {
   background: white; /* Weißer Hintergrund für Formulare */
   padding: 20px; /* Abstand innerhalb des Formulars */
