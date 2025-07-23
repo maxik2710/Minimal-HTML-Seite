@@ -1,29 +1,50 @@
-// Warte, bis das gesamte DOM geladen und geparst ist
+// Warte bis das DOM geladen ist
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Hol das Modal-Element
     const modal = document.getElementById('modal');
-
-    // Hol den Button, der das Modal öffnet
-    const openBtn = document.getElementById('openModalBtn');
-
-    // Hol den Button, der das Modal schließt (im Modal selbst)
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
     const closeBtn = document.getElementById('closeModalBtn');
+    const infoButtons = document.querySelectorAll('.info-btn');
 
-    // Füge Event Listener hinzu: beim Klick auf den Open-Button Modal anzeigen
-    openBtn.addEventListener('click', () => {
-        modal.style.display = 'block'; // Zeige das Modal
+    // Platzhalter-Inhalte für jedes Thema
+    const modalContent = {
+        career: {
+            title: 'Career Orientation',
+            text: 'Platzhalter-Text für Career orientation. Hier können Infos über Karriereberatung stehen.'
+        },
+        cv: {
+            title: 'CV and Cover Letter Support',
+            text: 'Platzhalter-Text für CV und Bewerbungsunterlagen. Hier können Details stehen.'
+        },
+        tools: {
+            title: 'Digital Tools and AI Basics',
+            text: 'Platzhalter-Text für Digital Tools und AI Basics. Inhalte über digitale Hilfe.'
+        },
+        mentoring: {
+            title: '1:1 Mentoring',
+            text: 'Platzhalter-Text für Mentoring. Infos über persönliche Unterstützung.'
+        }
+    };
+
+    // Event Listener für alle Info-Buttons
+    infoButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-info'); // Hole den data-info Wert
+            modalTitle.textContent = modalContent[key].title; // Setze Titel
+            modalText.textContent = modalContent[key].text; // Setze Text
+            modal.style.display = 'block'; // Zeige Modal
+        });
     });
 
-    // Füge Event Listener hinzu: beim Klick auf den Close-Button Modal ausblenden
+    // Modal schließen bei Klick auf ×
     closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none'; // Verstecke das Modal
+        modal.style.display = 'none';
     });
 
-    // Füge Event Listener hinzu: Modal schließen, wenn man außerhalb des Inhalts klickt
+    // Modal schließen bei Klick außerhalb
     window.addEventListener('click', (event) => {
-        if (event.target === modal) { // Prüfe, ob der Klick auf den Modal-Overlay ging
-            modal.style.display = 'none'; // Verstecke das Modal
+        if (event.target === modal) {
+            modal.style.display = 'none';
         }
     });
 });
