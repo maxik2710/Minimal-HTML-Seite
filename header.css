@@ -6,27 +6,27 @@
 /* H1 – Roboto */
 h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 0.5em;
 }
 
-/* H2 – Lora */
+/* H2 – Roboto */
 h2 {
-    font-family: 'Lora', serif;
-    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.5rem;
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 0.5em;
 }
 
-/* H3 – Montserrat */
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+/* H3 – Roboto */
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.17rem;
     font-weight: 700;
-    color: #555;
+    color: #FFFFFF;
     margin-bottom: 0.5em;
 }
 
