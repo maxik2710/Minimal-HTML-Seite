@@ -28,11 +28,8 @@ body {
 #Charity li {
     line-height: 1.5;       /* Abstand zwischen den Bullet Points */
     margin-bottom: 8px;     /* zusätzlicher Abstand */
-    
-    
 }
-/*font-size: 1rem;*/
-/*color: #555;            /* leicht abgeschwächte Schriftfarbe */
+
 
 main {
   padding: 40px; /* Abstand innerhalb des Hauptbereichs */
