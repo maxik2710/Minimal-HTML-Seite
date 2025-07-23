@@ -8,12 +8,12 @@ Sheets = „Blätter“ (Dateien)
 
 
 header {
-  background-color: #00008B;  /* Dunkelblauer Hintergrund */
+  background-color: #000080;  /* Dunkelblauer Hintergrund */
   color: white;               /* Weißer Text */
   display: flex;              /* Aktiviert Flexbox */
   justify-content: center;    /* Zentriert horizontal */
   align-items: center;        /* Zentriert vertikal */
-  height: 150px;              /* Höhe für den Header */
+  height: 75px;              /* Höhe für den Header */
 }
 
 body {
