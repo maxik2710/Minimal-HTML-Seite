@@ -8,7 +8,7 @@ Sheets = „Blätter“ (Dateien)
 
 header {
     background-color: #191970; /* Dunkelblauer Hintergrund */
-    color: white;             /* Weißer Text */
+    /*color: white;             /* Weißer Text */
     display: flex;            /* Aktiviert Flexbox */
     justify-content: space-between; /* h1 links, h2 rechts */
     align-items: center;      /* Vertikal zentrieren */
