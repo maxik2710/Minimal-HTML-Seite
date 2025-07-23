@@ -16,6 +16,74 @@ header {
     padding: 0 20px;          /* Etwas Abstand links und rechts */
 }
 
+/* ===========================
+   Login Modal Styles
+   =========================== */
+#loginModal, #signUpModal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#login-modal-content, #signup-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+#loginForm label, #signUpForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#loginForm input, #signUpForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #191970;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #000080;
+}
+
+.header-btn {
+    background: none;
+    border: none;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.header-btn:hover {
+    color: #ddd;
+}
+
+
 body {
   font-family: Arial, sans-serif; /* Schriftart für den gesamten Body */
   margin: 0; /* Entfernt Standard-Margins */
