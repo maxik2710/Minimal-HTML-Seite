@@ -16,33 +16,6 @@ header {
     padding: 0 20px;          /* Etwas Abstand links und rechts */
 }
 
-header h1 {
-    font-size: 16px;          /* Schriftgröße */
-    font-weight: bold;        /* Fettgedruckt */
-    margin: 0;                /* Kein extra Abstand */
-}
-
-header h2 {
-    font-size: 14px;          /* Schriftgröße */
-    font-weight: bold;        /* Fettgedruckt */
-    margin: 0;                /* Kein extra Abstand */
-}
-
-/* Alle h3 außerhalb des Headers */
-section h3 {
-    font-size: 14px;          /* Schriftgröße */
-    font-weight: bold;        /* Fettgedruckt */
-    margin: 0;                /* Kein extra Abstand */
-    color: black;             /* Textfarbe auf Schwarz setzen */
-}
-
-/* Optional: Styling für die Liste */
-#Charity ul {
-    margin: 10px 0;
-    padding-left: 20px;
-    color: black;             /* Textfarbe für die Liste */
-}
-
 body {
   font-family: Arial, sans-serif; /* Schriftart für den gesamten Body */
   margin: 0; /* Entfernt Standard-Margins */
