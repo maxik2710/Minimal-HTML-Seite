@@ -86,5 +86,34 @@ Language
     </div>
 </div>
 
+  <!-- Sign-Up Modal -->
+<div id="signUpModal">
+    <div id="signup-modal-content">
+        <button class="close-btn" id="closeSignUpModalBtn">&times;</button>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Max Mustermann">
+
+            <label for="signUpEmail">E-Mail:</label>
+            <input type="email" id="signUpEmail" name="email" required placeholder="you@example.com">
+
+            <label for="signUpPassword">Passwort:</label>
+            <input type="password" id="signUpPassword" name="password" required placeholder="●●●●●●">
+
+            <label for="repeatPassword">Passwort wiederholen:</label>
+            <input type="password" id="repeatPassword" name="repeatPassword" required placeholder="●●●●●●">
+
+            <label>
+                <input type="checkbox" id="terms" name="terms" required>
+                Ich akzeptiere die <a href="#">AGB</a>
+            </label>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+
 </body>
 </html>
