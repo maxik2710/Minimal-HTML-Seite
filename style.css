@@ -16,6 +16,11 @@ header {
   height: 75px;              /* Höhe für den Header */
 }
 
+header h1 {
+  font-size: 48px;  /* Schriftgröße */
+  font-weight: bold; /* Fettgedruckt */
+}
+
 body {
   font-family: Arial, sans-serif; /* Schriftart für den gesamten Body */
   margin: 0; /* Entfernt Standard-Margins */
