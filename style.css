@@ -13,7 +13,7 @@ header {
   display: flex;              /* Aktiviert Flexbox */
   justify-content: center;    /* Zentriert horizontal */
   align-items: center;        /* Zentriert vertikal */
-  height: 75px;              /* Höhe für den Header */
+  height: 48px;              /* Höhe für den Header */
 }
 
 header h1 {
