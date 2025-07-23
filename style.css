@@ -6,27 +6,28 @@ Style = „Stil“
 Sheets = „Blätter“ (Dateien)
 👉 eine CSS-Datei ist wie ein Blatt Papier, auf dem die Gestaltungsanweisungen stehen.*/
 
-
 header {
-  background-color: #191970;  /* Dunkelblauer Hintergrund */
-  color: white;               /* Weißer Text */
-  display: flex;              /* Aktiviert Flexbox */
-  justify-content: center;    /* Zentriert horizontal */
-  align-items: center;        /* Zentriert vertikal */
-  height: 48px;              /* Höhe für den Header */
+    background-color: #191970; /* Dunkelblauer Hintergrund */
+    color: white;             /* Weißer Text */
+    display: flex;            /* Aktiviert Flexbox */
+    justify-content: space-between; /* h1 links, h2 rechts */
+    align-items: center;      /* Vertikal zentrieren */
+    height: 48px;             /* Höhe für den Header */
+    padding: 0 20px;          /* Etwas Abstand links und rechts */
 }
 
 header h1 {
-  font-size: 16px;  /* Schriftgröße */
-  font-weight: bold; /* Fettgedruckt */
-}
-
+    font-size: 16px;          /* Schriftgröße */
+    font-weight: bold;        /* Fettgedruckt */
+    margin: 0;                /* Kein extra Abstand */
 }
 
 header h2 {
-  font-size: 14px;  /* Schriftgröße */
-  font-weight: bold; /* Fettgedruckt */
+    font-size: 14px;          /* Schriftgröße */
+    font-weight: bold;        /* Fettgedruckt */
+    margin: 0;                /* Kein extra Abstand */
 }
+
 
 body {
   font-family: Arial, sans-serif; /* Schriftart für den gesamten Body */
