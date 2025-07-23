@@ -1,4 +1,3 @@
-// Warte bis das DOM geladen ist
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
     const modalTitle = document.getElementById('modal-title');
@@ -6,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('closeModalBtn');
     const infoButtons = document.querySelectorAll('.info-btn');
 
-    // Platzhalter-Inhalte für jedes Thema
+    // Inhalte für jedes Thema
     const modalContent = {
         career: {
             title: 'Career Orientation',
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Listener für alle Info-Buttons
     infoButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            const key = btn.getAttribute('data-info'); // Hole den data-info Wert
+            const key = btn.dataset.info; // Hole den Wert aus data-info
             modalTitle.textContent = modalContent[key].title; // Setze Titel
             modalText.textContent = modalContent[key].text; // Setze Text
             modal.style.display = 'block'; // Zeige Modal
