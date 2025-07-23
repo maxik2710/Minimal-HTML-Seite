@@ -28,6 +28,12 @@ header h2 {
     margin: 0;                /* Kein extra Abstand */
 }
 
+header h3 {
+    font-size: 14px;          /* Schriftgröße */
+    font-weight: bold;        /* Fettgedruckt */
+    margin: 0;                /* Kein extra Abstand */
+    color: black;      /* Textfarbe auf Schwarz setzen */
+}
 
 body {
   font-family: Arial, sans-serif; /* Schriftart für den gesamten Body */
