@@ -25,11 +25,6 @@ body {
 
 /* === Charity Section Styles === */
 
-#Charity ul {
-    padding-left: 20px; /* Platz für Bullets */
-    list-style-type: disc; /* klassische Bullets */
-}
-
 #Charity li {
     line-height: 1.5;       /* Abstand zwischen den Bullet Points */
     margin-bottom: 8px;     /* zusätzlicher Abstand */
