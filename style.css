@@ -53,3 +53,18 @@ input, textarea {
   border: 1px solid #ccc; /* Hellgrauer Rahmen */
   border-radius: 4px; /* Leicht abgerundete Ecken */
 }
+
+/* Footer styling */
+.footer {
+  background-color: #007BFF; /* Blue background */
+  color: white;              /* White text color */
+  padding: 10px 20px;        /* Spacing inside the footer */
+  position: fixed;           /* Keep the footer visible at the bottom */
+  left: 0;                   /* Align to the left edge */
+  bottom: 0;                 /* Stick to the bottom of the viewport */
+  width: 100%;               /* Make it full-width */
+  text-align: left;          /* Left-align the text */
+  font-family: Arial, sans-serif; /* Clean, readable font */
+  font-size: 14px;           /* Comfortable text size */
+}
+
