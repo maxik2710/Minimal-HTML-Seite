@@ -5,6 +5,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('closeModalBtn');
     const infoButtons = document.querySelectorAll('.info-btn');
 
+// ===== Login Modal =====
+const loginModal = document.getElementById('loginModal');
+const loginBtn = document.getElementById('loginBtn');
+const closeLoginBtn = document.getElementById('closeLoginModalBtn');
+
+loginBtn.addEventListener('click', () => {
+    loginModal.style.display = 'block';
+});
+
+closeLoginBtn.addEventListener('click', () => {
+    loginModal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === loginModal) {
+        loginModal.style.display = 'none';
+    }
+});
+
+// Handle Login Submit
+const loginForm = document.getElementById('loginForm');
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Login erfolgreich mit: ' + loginForm.email.value);
+    loginModal.style.display = 'none';
+});
+
+// ===== Sign-Up Modal =====
+const signUpModal = document.getElementById('signUpModal');
+const signUpBtn = document.getElementById('signUpBtn');
+const closeSignUpBtn = document.getElementById('closeSignUpModalBtn');
+
+signUpBtn.addEventListener('click', () => {
+    signUpModal.style.display = 'block';
+});
+
+closeSignUpBtn.addEventListener('click', () => {
+    signUpModal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === signUpModal) {
+        signUpModal.style.display = 'none';
+    }
+});
+
+// Handle Sign-Up Submit
+const signUpForm = document.getElementById('signUpForm');
+signUpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Registrierung erfolgreich für: ' + signUpForm.name.value);
+    signUpModal.style.display = 'none';
+});
+
+
+    
     // Inhalte für jedes Thema
     const modalContent = {
         career: {
