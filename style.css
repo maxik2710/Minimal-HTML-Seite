@@ -23,6 +23,27 @@ body {
   background-color: #f7f9fb; /* Hellgrauer Hintergrund */
 }
 
+/* === Charity Section Styles === */
+#Charity {
+    padding: 20px;
+    background-color: #f9f9f9; /* sanfter Hintergrund */
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 40px auto; /* zentriert die Section */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#Charity ul {
+    padding-left: 20px; /* Platz für Bullets */
+    list-style-type: disc; /* klassische Bullets */
+}
+
+#Charity li {
+    line-height: 1.5;       /* Abstand zwischen den Bullet Points */
+    margin-bottom: 8px;     /* zusätzlicher Abstand */
+    color: #555;            /* leicht abgeschwächte Schriftfarbe */
+    font-size: 1rem;
+}
 
 
 main {
