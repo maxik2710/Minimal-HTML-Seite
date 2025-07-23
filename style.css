@@ -56,7 +56,7 @@ input, textarea {
 
 /* Footer styling */
 .footer {
-  background-color: #007BFF; /* Blue background */
+  background-color: #191970; /* Blue background */
   color: white;              /* White text color */
   padding: 10px 20px;        /* Spacing inside the footer */
   position: fixed;           /* Keep the footer visible at the bottom */
