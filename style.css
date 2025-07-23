@@ -65,37 +65,25 @@ section {
     animation: fadeIn 0.3s ease-out;
 }
 
-.close-btn {
-    float: right;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #aaa;
-    border: none;
+/* Buttons Styling */
+.info-btn {
     background: none;
+    border: none;
+    color: #0645AD; /* klassisches Link-Blau */
+    text-decoration: underline;
     cursor: pointer;
+    font: inherit; /* gleiche Schriftart wie der Text */
+    padding: 0; /* kein extra Padding */
 }
 
-.close-btn:hover {
-    color: #000;
+.info-btn:hover {
+    color: #0B0080;
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* Buttons Styling */
-.info-btn {
-    margin: 10px 0;
-    padding: 10px 15px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    cursor: pointer;
-}
-
-.info-btn:hover {
-    background-color: #ddd;
 }
 
 
