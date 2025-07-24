@@ -110,7 +110,7 @@ section {
 /* ===========================
    Modal Styles
    =========================== */
-#modal {
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -122,7 +122,7 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#modal-content {
+.modal-content {
     background-color: #fff;
     margin: 10% auto;
     padding: 20px;
@@ -133,6 +133,16 @@ section {
     animation: fadeIn 0.3s ease-out;
 }
 
+/* Optional: Close-Button-Stil */
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
 /* Buttons Styling */
 .info-btn {
     background: none;
@@ -149,9 +159,10 @@ section {
 }
 
 
+/*Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 
