@@ -18,9 +18,14 @@ closeLoginBtn.addEventListener('click', () => {
     loginModal.style.display = 'none';
 });
 
-window.addEventListener('click', (event) => {
-    if (event.target === loginModal) {
-        loginModal.style.display = 'none';
+window.addEventListener('click', function (e) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+
     }
 });
 
@@ -45,10 +50,14 @@ closeSignUpBtn.addEventListener('click', () => {
     signUpModal.style.display = 'none';
 });
 
-window.addEventListener('click', (event) => {
-    if (event.target === signUpModal) {
-        signUpModal.style.display = 'none';
+window.addEventListener('click', function (e) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
     }
+  });
+});
+
 });
 
 // Handle Sign-Up Submit
