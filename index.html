@@ -62,58 +62,26 @@ Language
   
   </main>
 
+<script src="modal.js"></script> <!-- Lade Modal-JS nach DOM -->
+
+<div id="modals-container"></div>
+
+<script>
+  // Modal-HTML laden und in #modals-container einfügen
+  fetch('modal.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('modals-container').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Fehler beim Laden der Modal-Datei:', error);
+    });
+</script>
+
   <!-- Footer section -->
 <footer class="footer">
   <p>&copy; 2025 Maxim Kechter All rights reserved.</p>
 </footer>
-
-<script src="modal.js"></script> <!-- Lade Modal-JS nach DOM -->
-
-  <!-- Login Modal -->
-<div id="loginModal">
-    <div id="login-modal-content">
-        <button class="close-btn" id="closeLoginModalBtn">&times;</button>
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="loginEmail">E-Mail:</label>
-            <input type="email" id="loginEmail" name="email" required placeholder="you@example.com">
-
-            <label for="loginPassword">Passwort:</label>
-            <input type="password" id="loginPassword" name="password" required placeholder="●●●●●●">
-
-            <button type="submit" class="submit-btn">Login</button>
-        </form>
-    </div>
-</div>
-
-  <!-- Sign-Up Modal -->
-<div id="signUpModal">
-    <div id="signup-modal-content">
-        <button class="close-btn" id="closeSignUpModalBtn">&times;</button>
-        <h2>Sign Up</h2>
-        <form id="signUpForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Max Mustermann">
-
-            <label for="signUpEmail">E-Mail:</label>
-            <input type="email" id="signUpEmail" name="email" required placeholder="you@example.com">
-
-            <label for="signUpPassword">Passwort:</label>
-            <input type="password" id="signUpPassword" name="password" required placeholder="●●●●●●">
-
-            <label for="repeatPassword">Passwort wiederholen:</label>
-            <input type="password" id="repeatPassword" name="repeatPassword" required placeholder="●●●●●●">
-
-            <label>
-                <input type="checkbox" id="terms" name="terms" required>
-                Ich akzeptiere die <a href="#">AGB</a>
-            </label>
-
-            <button type="submit" class="submit-btn">Sign Up</button>
-        </form>
-    </div>
-</div>
-
 
 </body>
 </html>
