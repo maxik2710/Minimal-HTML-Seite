@@ -14,34 +14,40 @@ document.addEventListener("DOMContentLoaded", function () {
       const loginModal = document.getElementById("loginModal");
       const signInModal = document.getElementById("signInModal");
 
-      loginBtn?.addEventListener("click", (e) => {
-        e.preventDefault();
-        loginModal.style.display = "block";
-      });
+       if (openLoginBtn && loginModal) {
+        openLoginBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          loginModal.style.display = "block";
+        });
+      }
 
-      signUpBtn?.addEventListener("click", (e) => {
-        e.preventDefault();
-        signInModal.style.display = "block";
-      });
+       if (openSignInBtn && signInModal) {
+        openSignInBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          signInModal.style.display = "block";
+        });
+      }
 
-      document.querySelectorAll(".modal .close").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          this.closest(".modal").style.display = "none";
+      // Schließen mit X
+      document.querySelectorAll(".modal .close").forEach((closeBtn) => {
+        closeBtn.addEventListener("click", () => {
+          closeBtn.closest(".modal").style.display = "none";
         });
       });
 
-      window.addEventListener("click", function (e) {
+      // Schließen bei Klick außerhalb
+      window.addEventListener("click", (event) => {
         document.querySelectorAll(".modal").forEach((modal) => {
           if (
             modal.style.display === "block" &&
-            e.target === modal
+            event.target === modal
           ) {
             modal.style.display = "none";
           }
         });
       });
     })
-    .catch((err) => {
-      console.error("Fehler beim Laden der modal.html:", err);
+    .catch((error) => {
+      console.error("Modal konnte nicht geladen werden:", error);
     });
 });
