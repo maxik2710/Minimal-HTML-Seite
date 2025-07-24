@@ -1,114 +1,47 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalText = document.getElementById('modal-text');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const infoButtons = document.querySelectorAll('.info-btn');
+// modal.js
 
-// ===== Login Modal =====
-const loginModal = document.getElementById('loginModal');
-const loginBtn = document.getElementById('loginBtn');
-const closeLoginBtn = document.getElementById('closeLoginModalBtn');
+// Lade die Modalstruktur
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("modal.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("modals-container").innerHTML = html;
 
-loginBtn.addEventListener('click', () => {
-    loginModal.style.display = 'block';
-});
+      // Eventlistener nach dem Einfügen binden
+      const loginBtn = document.getElementById("openLogin");
+      const signUpBtn = document.getElementById("openSignIn");
 
-closeLoginBtn.addEventListener('click', () => {
-    loginModal.style.display = 'none';
-});
+      const loginModal = document.getElementById("loginModal");
+      const signInModal = document.getElementById("signInModal");
 
-window.addEventListener('click', function (e) {
-  document.querySelectorAll('.modal').forEach(modal => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
+      loginBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginModal.style.display = "block";
+      });
 
-    }
-});
+      signUpBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        signInModal.style.display = "block";
+      });
 
-// Handle Login Submit
-const loginForm = document.getElementById('loginForm');
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Login erfolgreich mit: ' + loginForm.email.value);
-    loginModal.style.display = 'none';
-});
-
-// ===== Sign-Up Modal =====
-const signUpModal = document.getElementById('signUpModal');
-const signUpBtn = document.getElementById('signUpBtn');
-const closeSignUpBtn = document.getElementById('closeSignUpModalBtn');
-
-signUpBtn.addEventListener('click', () => {
-    signUpModal.style.display = 'block';
-});
-
-closeSignUpBtn.addEventListener('click', () => {
-    signUpModal.style.display = 'none';
-});
-
-window.addEventListener('click', function (e) {
-  document.querySelectorAll('.modal').forEach(modal => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
-
-});
-
-// Handle Sign-Up Submit
-const signUpForm = document.getElementById('signUpForm');
-signUpForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Registrierung erfolgreich für: ' + signUpForm.name.value);
-    signUpModal.style.display = 'none';
-});
-
-
-    
-    // Inhalte für jedes Thema
-    const modalContent = {
-        career: {
-            title: 'Career Orientation',
-            text: 'Platzhalter-Text für Career orientation. Hier können Infos über Karriereberatung stehen.'
-        },
-        cv: {
-            title: 'CV and Cover Letter Support',
-            text: 'Platzhalter-Text für CV und Bewerbungsunterlagen. Hier können Details stehen.'
-        },
-        tools: {
-            title: 'Digital Tools and AI Basics',
-            text: 'Platzhalter-Text für Digital Tools und AI Basics. Inhalte über digitale Hilfe.'
-        },
-        mentoring: {
-            title: '1:1 Mentoring',
-            text: 'Platzhalter-Text für Mentoring. Infos über persönliche Unterstützung.'
-        }
-    };
-
-    // Event Listener für alle Info-Buttons
-    infoButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const key = btn.dataset.info; // Hole den Wert aus data-info
-            modalTitle.textContent = modalContent[key].title; // Setze Titel
-            modalText.textContent = modalContent[key].text; // Setze Text
-            modal.style.display = 'block'; // Zeige Modal
+      document.querySelectorAll(".modal .close").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          this.closest(".modal").style.display = "none";
         });
-    });
+      });
 
-    // Modal schließen bei Klick auf ×
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // Modal schließen bei Klick außerhalb
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
+      window.addEventListener("click", function (e) {
+        document.querySelectorAll(".modal").forEach((modal) => {
+          if (
+            modal.style.display === "block" &&
+            e.target === modal
+          ) {
+            modal.style.display = "none";
+          }
+        });
+      });
+    })
+    .catch((err) => {
+      console.error("Fehler beim Laden der modal.html:", err);
     });
 });
