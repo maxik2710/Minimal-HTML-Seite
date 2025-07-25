@@ -103,3 +103,13 @@ signUpForm.addEventListener('submit', (e) => {
         }
     });
 });
+
+<script>
+function copyText(button) {
+  const textarea = button.previousElementSibling;
+  textarea.select();
+  document.execCommand("copy");
+  alert("Text wurde kopiert!");
+}
+</script>
+
