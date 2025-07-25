@@ -6,16 +6,16 @@
 /* H1 – Roboto MAXIK.AI */
 h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 14pt; 
     font-weight: 700;
     color: #FFFFFF;
-    margin-bottom: 0.5em;
+    margin-bottom: 6pt; /* 0.5em ≈ 6pt, da 1em ≈ 12pt */
 }
 
 /* H2 – Roboto Login Sign In*/
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 8pt;
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 0.5em;
